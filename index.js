@@ -45,5 +45,15 @@ class BST {
     }
     searchTree(this.root)
   }
+
+  min(){
+    let currentNode = this.root
+
+    //continue traversing the left until no more children
+    while (currentNode.left) {
+      currentNode = currentNode.left
+    }
+    return currentNode.value
+  }
   
 }
