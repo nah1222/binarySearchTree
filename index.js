@@ -64,5 +64,21 @@ class BST {
     }
     return currentNode.value
   }
+
+  contains(value) {
+    let currentNode = this.root
+
+    while (currentNode){
+      if (value === currentNode.value) {
+        return true
+      }
+      if (value < currentNode.value) {
+        currentNode = currentNode.left
+      } else {
+        currentNode = currentNode.right
+      }
+    }
+    return false;
+  }
   
 }
