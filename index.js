@@ -5,3 +5,11 @@ class Node {
     this.right = null
   }
 }
+class BST {
+  constructor(value) {
+    this.root = new Node(value)
+    this.count = 0
+  }
+
+  
+}
