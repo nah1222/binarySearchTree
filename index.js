@@ -55,5 +55,14 @@ class BST {
     }
     return currentNode.value
   }
+  max(){
+    let currentNode = this.root
+
+    //contintue traversing the right until there are no more children
+    while (currentNode.right){
+      currentNode = currentNode.right
+    }
+    return currentNode.value
+  }
   
 }
