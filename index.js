@@ -65,7 +65,7 @@ class BST {
     return currentNode.value
   }
 
-  contains(value) {
+  search(value) {
     let currentNode = this.root
 
     while (currentNode){
@@ -136,6 +136,15 @@ class BST {
     }
     traverse(this.root)
     return result
+  }
+
+  //breadth first search - level by level
+
+  //use a queue
+  bfs() {
+    let result = []
+    let queue = []
+
   }
   
 }
