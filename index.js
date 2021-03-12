@@ -80,5 +80,62 @@ class BST {
     }
     return false;
   }
+
+  //depth first search - branch by branch
+
+  //in-order
+  //left, root, right
+  dfsInOrder() {
+    let result = []
+
+    const traverse = node => {
+      //if left child exist go left again
+      if (node.left) traverse(node.left)
+      //capture root node value
+      result.push (node.value)
+      // if right child exists, go right again
+      if (node.right) traverse(node.right)
+
+    }
+    traverse(this.root)
+    return result
+  }
+
+  //pre-order
+  //root, left, right
+  dfsPreOrder() {
+    let result = [];
+    const traverse = node => {
+      //capture root node value
+      result.push(node.value)
+      // if left child exists, go leeft again
+      if (node.left) traverse(node.left)
+      // if right child exists, go right again
+      if (node.right) tranverse(node.right)
+    }
+
+    traverse(this.root)
+
+    return result
+    
+  }
+
+  //post-order
+  //left, right, root
+  dfsPostOrder(){
+    let result = [];
+
+    const traverse = node => {
+      //if left child exists, go left again
+      if (node.left) traverse(node.left)
+      //if right child exists, go right again
+      if (node.right) traverse(node.right)
+      // capture root node value
+      result.push(node.value)
+
+    }
+    traverse(this.root)
+    return result
+  }
   
 }
