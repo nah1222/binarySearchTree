@@ -177,8 +177,8 @@ bst.size()
 bst.min()
 bst.max()
 
-bst.contains(2)
-bst.contains(9)
+bst.search(2)
+bst.search(9)
 
 // DFS!!!
 // in-order: 2, 3, 12, 15, 28, 36, 39
