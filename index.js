@@ -145,6 +145,21 @@ class BST {
     let result = []
     let queue = []
 
+    queue.push(this.root)
+
+    while(queue.length) {
+      let currentNode = queue.shift()
+
+      result.push(currentNode.value)
+
+      if (currentNode.left){
+        queue.push(currentNode.left)
+      }
+      if (currentNode.right){
+        queue.push(currentNode.right)
+      }
+    }
+    return result
   }
   
 }
